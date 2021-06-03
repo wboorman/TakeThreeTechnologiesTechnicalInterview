@@ -1,11 +1,11 @@
+using System.Linq;
+using System.Reflection;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using NetCore.AutoRegisterDi;
-using System.Linq;
-using System.Reflection;
 using TechnicalChallengeApp.BusinessLogic.Calculation;
 
 namespace TechnicalChallengeApp
@@ -26,9 +26,7 @@ namespace TechnicalChallengeApp
                 .AddNewtonsoftJson(options =>
                 options.SerializerSettings.Converters.Add(new Newtonsoft.Json.Converters.StringEnumConverter()));
 
-            //
             // Register our business logic and database interfaces
-            //
             var businessLogicProject = Assembly.GetAssembly(typeof(ICalculationManagement));
 
             services.RegisterAssemblyPublicNonGenericClasses(businessLogicProject)
@@ -46,9 +44,11 @@ namespace TechnicalChallengeApp
             else
             {
                 app.UseExceptionHandler("/Home/Error");
+
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
+
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 

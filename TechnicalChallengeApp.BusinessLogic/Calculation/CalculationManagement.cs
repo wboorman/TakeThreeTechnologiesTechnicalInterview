@@ -55,6 +55,7 @@ namespace TechnicalChallengeApp.BusinessLogic.Calculation
                         apiResponse.IsSuccess = false;
                         apiResponse.Message = "You cannot divide by zero";
                     }
+
                     break;
             }
 

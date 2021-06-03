@@ -1,6 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using System;
+﻿using System;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
 using TechnicalChallengeApp.BusinessLogic.Calculation;
 using TechnicalChallengeApp.BusinessLogic.Session;
 using TechnicalChallengeApp.Model.Calculation;
@@ -16,8 +16,8 @@ namespace TechnicalChallengeApp.Controllers
         private readonly ICalculationManagement _calculationManagement;
         private readonly ISessionManagement _sessionManagement;
 
-        public CalculatorController(ICalculationManagement calculationManagement,
-            ISessionManagement sessionManagement)
+        public CalculatorController(
+            ICalculationManagement calculationManagement, ISessionManagement sessionManagement)
         {
             _calculationManagement = calculationManagement;
             _sessionManagement = sessionManagement;

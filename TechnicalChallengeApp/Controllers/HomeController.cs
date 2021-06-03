@@ -1,8 +1,8 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
-using System;
+﻿using System;
 using System.Diagnostics;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 using TechnicalChallengeApp.BusinessLogic.Session;
 using TechnicalChallengeApp.Models;
 
@@ -41,7 +41,7 @@ namespace TechnicalChallengeApp.Controllers
         /// The calculator interface
         /// </summary>
         /// <param name="id">The user's session identifier</param>
-        /// <returns>The calculator interface</returns>
+        /// <returns>the calculator interface</returns>
         public IActionResult Calculator(Guid? id)
         {
             if (id == null)

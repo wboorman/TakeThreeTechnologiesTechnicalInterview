@@ -1,6 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore;
-using System;
+﻿using System;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 using TechnicalChallengeApp.DataRepository;
 using TechnicalChallengeApp.DataRepository.Table;
 using TechnicalChallengeApp.Model.Global;
