@@ -59,6 +59,8 @@ namespace TechnicalChallengeApp.BusinessLogic.Calculation
                     break;
             }
 
+            apiResponse.Data.Total = totalValue;
+
             return apiResponse;
         }
     }
